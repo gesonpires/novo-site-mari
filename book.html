@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agende uma Consulta</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="about.html">Sobre</a></li>
+                <li><a href="services.html">Serviços</a></li>
+                <li><a href="testimonials.html">Depoimentos</a></li>
+                <li><a href="resources.html">Recursos e Blog</a></li>
+                <li><a href="book.html">Agende uma Consulta</a></li>
+                <li><a href="contact.html">Contato</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="book">
+            <h1>Agende uma Consulta</h1>
+            <form action="#" method="post">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Telefone:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="service">Serviço Desejado:</label>
+                <select id="service" name="service">
+                    <option value="aval-psico">Avaliação Psicopedagógica</option>
+                    <option value="inter-neuro">Intervenção Neuropsicopedagógica</option>
+                    <option value="acomp-escolar">Acompanhamento Escolar</option>
+                    <option value="ter-cog-comport">Terapias Cognitivas e Comportamentais</option>
+                    <option value="consult-pais">Consultoria para Pais e Educadores</option>
+                </select>
+                
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Sua Clínica de Psicopedagogia e Neuropsicopedagogia</p>
+    </footer>
+</body>
+</html>
