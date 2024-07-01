@@ -6,34 +6,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $service = htmlspecialchars($_POST['service']);
     $message = htmlspecialchars($_POST['message']);
 
-    // Conectar ao banco de dados (substitua com suas próprias credenciais)
-    $servername = "localhost";
-    $username = "username";
-    $password = "password";
-    $dbname = "database_name";
+    $to = "geson.pires@gmail.com"; // Substitua com seu endereço de e-mail
+    $subject = "Novo Agendamento de Consulta";
+    $body = "Nome: $name\nEmail: $email\nTelefone: $phone\nServiço: $service\nMensagem: $message";
 
-    // Criar conexão
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    $headers = "From: $email" . "\r\n" .
+               "Reply-To: $email" . "\r\n" .
+               "X-Mailer: PHP/" . phpversion();
 
-    // Verificar conexão
-    if ($conn->connect_error) {
-        die("Falha na conexão: " . $conn->connect_error);
-    }
-
-    // Preparar e vincular
-    $stmt = $conn->prepare("INSERT INTO bookings (name, email, phone, service, message) VALUES (?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssss", $name, $email, $phone, $service, $message);
-
-    // Executar a declaração
-    if ($stmt->execute()) {
-        echo "Novo registro criado com sucesso";
+    if (mail($to, $subject, $body, $headers)) {
+        echo "E-mail enviado com sucesso.";
     } else {
-        echo "Erro: " . $stmt->error;
+        echo "Falha no envio do e-mail.";
     }
-
-    // Fechar conexões
-    $stmt->close();
-    $conn->close();
 } else {
     echo "Método de solicitação inválido";
 }

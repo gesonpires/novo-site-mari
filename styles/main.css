@@ -48,7 +48,7 @@ nav ul li a:hover {
 #hero {
     text-align: center;
     padding: 80px 20px;
-    background: #2980B9;
+    background: #3ba33a;
     color: #fff;
 }
 
@@ -103,7 +103,7 @@ section h1 {
 }
 
 .service h2, .testimonial p, .article h2 {
-    color: #2980B9;
+    color: #17b81f;
 }
 
 /* Formulários */
