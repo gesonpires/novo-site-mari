@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -24,24 +25,22 @@
     <main>
         <section id="contact">
             <h1>Contato</h1>
-            <p>Endereço: Rua Exemplo, 123, Florianópolis, SC</p>
+            <p>Endereço: Avenida Osmar Cunha, 183, bloco B, sala 910, Florianópolis, SC</p>
             <p>Telefone: (48) 1234-5678</p>
-            <p>Email: contato@seudominio.com</p>
-            <a href="https://wa.me/55123456789" class="btn">WhatsApp</a>
-            <div id="map">
-                <!-- Integrar mapa do Google Maps -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093747!2d144.9537363156206!3d-37.816279742021524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577120c1d8a0e67!2sRua%20Exemplo%2C%20123%2C%20Florian%C3%B3polis%2C%20SC!5e0!3m2!1spt-BR!2sbr!4v1604501824568!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <p>Email: contato@seudominio.com.br</p>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3520.4659289245015!2d-48.5512643844692!3d-27.595903182824007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x952737be32f57f1d%3A0x9b5c44b1b4ed6b36!2sCeisa%20Center!5e0!3m2!1sen!2sbr!4v1623158235635!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
-            <form action="https://example.com/contato" method="POST">
+            <form action="submit_contact.php" method="POST">
                 <label for="name">Nome:</label>
                 <input type="text" id="name" name="name" required>
-                
+
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
-                
+
                 <label for="message">Mensagem:</label>
                 <textarea id="message" name="message" required></textarea>
-                
+
                 <button type="submit">Enviar</button>
             </form>
         </section>

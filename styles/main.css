@@ -1,13 +1,23 @@
+/* Configuração global */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #333;
+    background-color: #f9f9f9;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* Cabeçalho e Navegação */
 header {
-    background-color: #4CAF50;
-    padding: 10px 0;
+    background-color: #2C3E50;
+    padding: 20px 0;
 }
 
 nav ul {
@@ -15,51 +25,224 @@ nav ul {
     display: flex;
     justify-content: center;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
-    color: white;
+    color: #ECF0F1;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
 }
 
+nav ul li a:hover {
+    color: #1ABC9C;
+}
+
+/* Seção Hero */
 #hero {
     text-align: center;
-    padding: 50px 20px;
-    background: #f4f4f4;
+    padding: 80px 20px;
+    background: #2980B9;
+    color: #fff;
 }
 
 #hero h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     margin-bottom: 20px;
+    line-height: 1.2;
 }
 
 #hero img {
     max-width: 100%;
     height: auto;
+    border-radius: 10px;
 }
 
 .cta-buttons .btn {
     display: inline-block;
-    margin: 10px;
-    padding: 15px 25px;
-    color: white;
-    background-color: #4CAF50;
+    margin: 15px;
+    padding: 15px 30px;
+    color: #fff;
+    background-color: #1ABC9C;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
 }
 
-footer {
-    background-color: #4CAF50;
-    color: white;
+.cta-buttons .btn:hover {
+    background-color: #16A085;
+}
+
+/* Seções de Conteúdo */
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #2C3E50;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
+}
+
+.service, .testimonial, .article {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.service h2, .testimonial p, .article h2 {
+    color: #2980B9;
+}
+
+/* Formulários */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input, form select, form textarea {
     width: 100%;
-    bottom: 0;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    display: inline-block;
+    padding: 15px 30px;
+    color: #fff;
+    background-color: #1ABC9C;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #16A085;
+}
+
+/* Mapas */
+.map-container {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #2C3E50;
+    color: #ECF0F1;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #hero h1 {
+        font-size: 2em;
+    }
+
+    .cta-buttons .btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    section h1 {
+        font-size: 2em;
+    }
+
+    .service, .testimonial, .article {
+        padding: 15px;
+    }
+
+    form button {
+        width: 100%;
+        padding: 15px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 8px 0;
+    }
+
+    #hero {
+        padding: 60px 10px;
+    }
+
+    #hero h1 {
+        font-size: 1.8em;
+    }
+
+    .cta-buttons .btn {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+
+    section h1 {
+        font-size: 1.8em;
+    }
+
+    .service, .testimonial, .article {
+        padding: 10px;
+    }
+
+    form label {
+        font-size: 0.9em;
+    }
+
+    form input, form select, form textarea {
+        font-size: 0.9em;
+    }
+
+    form button {
+        padding: 10px 0;
+        font-size: 1em;
+    }
 }
